@@ -858,8 +858,7 @@ def restart_bot():
 
 while True:
     try:
-        bot.infinity_polling(timeout=20, long_polling_timeout=30)
+        bot.infinity_polling(timeout=5000, long_polling_timeout=3000)
     except Exception as e:
         print(f"Ошибка: {e}")
-        time.sleep(5)
         restart_bot()
